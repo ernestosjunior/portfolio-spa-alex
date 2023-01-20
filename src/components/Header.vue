@@ -1,12 +1,12 @@
 <template>
   <header class="header">
     <Logo />
-    <nav v-if="routes.length" class="links">
+    <nav v-if="routes.length" class="header__links">
       <router-link
         v-for="option in routes"
         :to="option.link"
-        class="link"
-        active-class="link-active"
+        class="links__link"
+        active-class="link--active"
         >{{ option.label }}</router-link
       >
     </nav>
@@ -31,11 +31,13 @@ const routes = [
   align-items: center;
   padding: 4% 8%;
 }
-.links {
+
+.header__links {
   display: flex;
   column-gap: 40px;
 }
-.link {
+
+.links__link {
   all: unset;
   cursor: pointer;
   font-weight: 400;
@@ -43,9 +45,11 @@ const routes = [
   line-height: 14px;
   letter-spacing: 2px;
 }
-.link-active {
+
+.link--active {
   color: #5fb4a2;
 }
+
 @media (max-width: 481px) {
   .header {
     flex-direction: column;

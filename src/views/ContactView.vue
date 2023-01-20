@@ -1,10 +1,10 @@
 <template>
   <BaseLayout>
-    <main class="contactView">
-      <hr />
-      <div class="callMe">
-        <h1>Entre em Contato</h1>
-        <section class="callMe-left">
+    <main class="contact-view">
+      <hr class="contact-view__hr" />
+      <div class="call">
+        <h1 class="call__title">Entre em Contato</h1>
+        <section class="call__left">
           <h2>
             Eu adoraria escutar sobre seu trabalho atual e como eu poderia
             ajudar. Atualmente estou procurando por um cargo e aberto para
@@ -15,13 +15,13 @@
             detalhes. Fique livre para checar meu perfis abaixo e entrar em
             contato utilizando o formulário.
           </h2>
-          <img :src="networksDark" />
+          <img :src="networksDark" class="left__img" />
         </section>
       </div>
-      <hr />
-      <div class="contactSection">
-        <h1>Contato</h1>
-        <section v-if="inputs.length">
+      <hr class="contact-view__hr" />
+      <div class="contact-section">
+        <h1 class="contact-section__title">Contato</h1>
+        <section v-if="inputs.length" class="contact-section__form">
           <Input
             v-for="input in inputs"
             :label="input.label"
@@ -46,16 +46,18 @@ const inputs = [
 </script>
 
 <style scoped>
-.contactView {
+.contact-view {
   width: var(--home-sections-width);
 }
-.callMe,
-.contactSection {
+
+.call,
+.contact-section {
   display: flex;
   column-gap: 125px;
 }
-.callMe > h1,
-.contactSection > h1 {
+
+.call__title,
+.contact-section__title {
   width: 50%;
   font-family: "Ibarra Real Nova";
   font-style: normal;
@@ -66,7 +68,7 @@ const inputs = [
   color: #33323d;
 }
 
-.callMe-left {
+.call__left {
   width: 50%;
   font-style: normal;
   font-weight: 400;
@@ -76,25 +78,29 @@ const inputs = [
   mix-blend-mode: normal;
   opacity: 0.8;
 }
-.callMe-left > img {
+
+.left__img {
   margin-top: 54px;
 }
-.contactSection {
+
+.contact-section {
   margin-bottom: 150px;
 }
-.contactSection > h1,
-.contactSection > section {
+
+.contact-section__title,
+.contact-section__form {
   width: 50%;
 }
 
-hr {
+.contact-view__hr {
   width: 100%;
   border-bottom: 1px solid #33323d;
   mix-blend-mode: normal;
   opacity: 0.15;
   margin: 48px 0;
 }
-hr:first-child {
+
+.contact-view__hr:first-child {
   margin-top: unset;
 }
 </style>

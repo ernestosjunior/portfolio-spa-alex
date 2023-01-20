@@ -1,6 +1,6 @@
 <template>
   <label class="label">
-    <p>{{ label }}</p>
+    <p class="label__text">{{ label }}</p>
     <textarea v-if="type === 'textarea'" class="textarea" />
     <input v-else type="text" class="input" />
   </label>
@@ -16,7 +16,8 @@ defineProps({ label: String, type: String });
   flex-direction: column;
   gap: 8px;
 }
-.label > p {
+
+.label__text {
   font-weight: 700;
   font-size: 13px;
   line-height: 30px;
@@ -24,6 +25,7 @@ defineProps({ label: String, type: String });
   mix-blend-mode: normal;
   opacity: 0.8;
 }
+
 .input,
 .textarea {
   all: unset;
@@ -34,6 +36,7 @@ defineProps({ label: String, type: String });
   height: 48px;
   width: 100%;
 }
+
 .textarea {
   min-height: 96px;
 }

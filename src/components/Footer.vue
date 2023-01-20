@@ -1,11 +1,14 @@
 <template>
   <footer class="footer">
-    <section class="left">
+    <section class="footer__left">
       <Logo :fill="'#ffffff'" />
-      <nav v-if="routes.length" class="links">
-        <router-link v-for="option in routes" :to="option.link" class="link">{{
-          option.label
-        }}</router-link>
+      <nav v-if="routes.length" class="footer__links">
+        <router-link
+          v-for="option in routes"
+          :to="option.link"
+          class="links__link"
+          >{{ option.label }}</router-link
+        >
       </nav>
     </section>
     <img :src="networks" />
@@ -35,16 +38,19 @@ const routes = [
   position: absolute;
   bottom: 0;
 }
-.left {
+
+.footer__left {
   display: flex;
   align-items: center;
   column-gap: 48px;
 }
-.links {
+
+.footer__links {
   display: flex;
   column-gap: 40px;
 }
-.link {
+
+.links__link {
   all: unset;
   cursor: pointer;
   font-weight: 400;
@@ -52,8 +58,5 @@ const routes = [
   line-height: 14px;
   letter-spacing: 2px;
   color: #ffffff;
-}
-
-@media (max-width: 481px) {
 }
 </style>

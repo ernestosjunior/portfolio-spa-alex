@@ -1,7 +1,7 @@
 <template>
-  <main class="container">
+  <main class="base-layout">
     <Header />
-    <section class="main">
+    <section class="base-layout__main">
       <slot />
     </section>
     <Footer />
@@ -14,7 +14,7 @@ import Footer from "@/components/Footer.vue";
 </script>
 
 <style scoped>
-.container {
+.base-layout {
   position: relative;
   height: 100%;
   display: flex;
@@ -22,7 +22,8 @@ import Footer from "@/components/Footer.vue";
   justify-content: center;
   align-items: center;
 }
-.main {
+
+.base-layout__main {
   min-height: 100vh;
 }
 </style>

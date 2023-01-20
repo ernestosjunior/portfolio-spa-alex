@@ -2,22 +2,24 @@
   <BaseLayout>
     <main>
       <section class="hero">
-        <img :src="heroImage" class="hero-image" />
-        <article class="hero-box">
-          <h1>Olá, me chamo Alex Spencer e eu amo construir websites lindos</h1>
-          <button class="aboutButton" @click="goToAbout">
+        <img :src="heroImage" class="hero__image" />
+        <article class="hero__box">
+          <h1 class="box__title">
+            Olá, me chamo Alex Spencer e eu amo construir websites lindos
+          </h1>
+          <button class="box__button" @click="goToAbout">
             <img :src="arrowDown" />
-            <p>SOBRE MIM</p>
+            <p class="box__text">SOBRE MIM</p>
           </button>
         </article>
       </section>
       <section class="about" id="about">
-        <div class="about-left">
-          <img :src="alex" />
+        <div class="about__left">
+          <img :src="alex" class="left__img" />
         </div>
-        <div class="about-right">
-          <h1 class="about-title">Sobre mim</h1>
-          <h2 class="about-description">
+        <div class="about__right">
+          <h1 class="right__title">Sobre mim</h1>
+          <h2 class="right__description">
             Sou um desenvolvedor front-end júnior procurando por uma
             oportunidade. Eu foco em escrever HTML acessível, usando práticas
             modernas de CSS e escrevendo um JavaScript limpo. Quando estou
@@ -35,7 +37,7 @@
         </div>
       </section>
       <section class="contact">
-        <h3>
+        <h3 class="contact__title">
           Interessado em fazer <br />
           projetos comigo?
         </h3>
@@ -74,11 +76,13 @@ function goToContact() {
   position: relative;
   margin-bottom: 115px;
 }
-.hero-image {
+
+.hero__image {
   width: var(--home-sections-width);
   max-height: 600px;
 }
-.hero-box {
+
+.hero__box {
   position: absolute;
   z-index: 1;
   background: #fafafa;
@@ -86,7 +90,8 @@ function goToContact() {
   left: 0;
   width: 445px;
 }
-.hero-box > h1 {
+
+.box__title {
   font-family: "Ibarra Real Nova", serif;
   font-weight: 700;
   font-size: 50px;
@@ -95,7 +100,8 @@ function goToContact() {
   color: #33323d;
   padding: 48px 24px;
 }
-.aboutButton {
+
+.box__button {
   all: unset;
   cursor: pointer;
   background: #203a4c;
@@ -105,10 +111,12 @@ function goToContact() {
   width: 44%;
   color: #ffffff;
 }
-.aboutButton > p {
+
+.box__text {
   flex: 1;
   text-align: center;
 }
+
 .about {
   width: var(--home-sections-width);
   margin-bottom: 160px;
@@ -116,15 +124,16 @@ function goToContact() {
   column-gap: 110px;
 }
 
-.about-left {
+.about__left {
   width: 50%;
   height: 600px;
 }
 
-.about-left > img {
+.left__img {
   object-fit: cover;
 }
-.about-right {
+
+.about__right {
   width: 50%;
   height: 100%;
   max-width: 430px;
@@ -132,7 +141,8 @@ function goToContact() {
   flex-direction: column;
   gap: 28px;
 }
-.about-title {
+
+.right__title {
   font-family: "Ibarra Real Nova";
   font-style: normal;
   font-weight: 700;
@@ -141,7 +151,8 @@ function goToContact() {
   letter-spacing: -0.357143px;
   color: #33323d;
 }
-.about-description {
+
+.right__description {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -149,6 +160,22 @@ function goToContact() {
   color: #33323d;
   mix-blend-mode: normal;
   opacity: 0.8;
+}
+
+.contact {
+  width: var(--home-sections-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.contact__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: -0.357143px;
+  color: #33323d;
 }
 
 .button {
@@ -166,21 +193,6 @@ function goToContact() {
   line-height: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #33323d;
-}
-.contact {
-  width: var(--home-sections-width);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 150px;
-}
-
-.contact > h3 {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 42px;
-  letter-spacing: -0.357143px;
   color: #33323d;
 }
 </style>
