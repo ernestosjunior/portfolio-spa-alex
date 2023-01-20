@@ -61,8 +61,14 @@ function goToPortfolio() {
 }
 
 function goToAbout() {
-  let element = document.getElementById("about");
-  if (element) element.scrollIntoView({ behavior: "smooth" });
+  const element = document.getElementById("about");
+
+  if (element) {
+    element.scrollIntoView({
+      block: "center",
+      behavior: "smooth",
+    });
+  }
 }
 
 function goToContact() {
