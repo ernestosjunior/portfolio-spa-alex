@@ -115,7 +115,7 @@ function goToContact() {
   height: 48px;
   display: flex;
   align-items: center;
-  width: 44%;
+  width: 60%;
   color: #ffffff;
 }
 
