@@ -64,8 +64,9 @@ function goToAbout() {
   const element = document.getElementById("about");
 
   if (element) {
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 950;
     element.scrollIntoView({
-      block: "center",
+      block: isMobile ? "start" : "center",
       behavior: "smooth",
     });
   }
