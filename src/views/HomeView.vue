@@ -201,4 +201,29 @@ function goToContact() {
   text-transform: uppercase;
   color: #33323d;
 }
+
+@media (max-width: 949px) {
+  .hero {
+    margin-top: 60px;
+  }
+
+  .hero__box {
+    position: initial;
+    width: var(--home-sections-width);
+  }
+
+  .about {
+    flex-direction: column;
+    width: var(--home-sections-width);
+  }
+
+  .about__right {
+    width: 100%;
+  }
+
+  .left__img {
+    width: var(--home-sections-width);
+    height: 95%;
+  }
+}
 </style>

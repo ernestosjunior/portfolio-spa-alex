@@ -59,4 +59,13 @@ const routes = [
   letter-spacing: 2px;
   color: #ffffff;
 }
+
+@media (max-width: 949px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+    gap: 18px;
+    padding: 4% 8%;
+  }
+}
 </style>
