@@ -205,7 +205,7 @@ function goToContact() {
 
 @media (max-width: 949px) {
   .hero {
-    margin-top: 60px;
+    margin: 60px 0;
   }
 
   .hero__box {
@@ -224,7 +224,8 @@ function goToContact() {
 
   .left__img {
     width: var(--home-sections-width);
-    height: 95%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 </style>
